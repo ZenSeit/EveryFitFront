@@ -1,0 +1,54 @@
+.card--container{
+    padding: 10%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.title--card{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content--card{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+}
+
+.img--card{
+    grid-column: 1 / 2;
+    width: 15vw;
+    padding: 5%;
+}
+
+.price--card{
+    grid-column: 2 / 3;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.add--actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    button{
+        margin: 0 10px;
+        border-radius: 8px;
+    }
+}
