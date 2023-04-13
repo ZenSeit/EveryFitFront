@@ -1,17 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { CustomerService } from 'src/app/services/customerService/customer.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit{
-
+export class LoginComponent implements OnInit {
   myForm: FormGroup = new FormGroup({});
 
-  constructor(private fb: FormBuilder) {
-  }
+  constructor(
+    private fb: FormBuilder,
+    private customerService: CustomerService
+  ) {}
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -21,10 +28,21 @@ export class LoginComponent implements OnInit{
   }
 
   onSubmit(form: FormGroup) {
-    console.log('Valid?', form.valid); // true or false
-    console.log('Email', form.value.email);
-    console.log('Password', form.value.password);
+    this.customerService
+      .login(form.value)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
+  get email() {
+    return this.myForm.get('email');
+  }
 
+  get password() {
+    return this.myForm.get('password');
+  }
 }

@@ -1,1 +1,14 @@
-<app-login></app-login>
+<div class="container--form">
+    <mat-slide-toggle (change)="onClickSlideToggle()" class="slide--option">{{
+        showText
+      }}</mat-slide-toggle>
+      
+      <ng-template [ngIf]="showLogin" [ngIfElse]="register">
+        <app-login></app-login>
+      </ng-template>
+      
+      <ng-template #register>
+        <app-register-customer></app-register-customer>
+      </ng-template>
+</div>
+
