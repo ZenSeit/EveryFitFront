@@ -1,0 +1,16 @@
+.grid--container {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+
+.card--container {
+  width: 90%;
+  height: 90%;
+  padding: 10%;
+  display: flex;
+}
