@@ -1,8 +1,8 @@
 import { ClothingItem } from "./clothingItem.model";
 
 export interface Order {
-    id:String,
-    customer:String,
+    id?:string,
+    customer:string,
     products:ClothingItem[],
-    state:String
+    state:string
 }

@@ -1,9 +1,9 @@
 export interface ClothingItem {
-    id:String,
-    name:String,
-    description:String,
+    id?:string,
+    name:string,
+    description:string,
     price:number,
-    urlImage:String,
-    category:String,
+    urlImage:string,
+    category:string,
     quantity:number
 }
