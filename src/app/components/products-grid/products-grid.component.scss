@@ -1,11 +1,10 @@
 .grid--container {
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
   justify-content: center;
   align-items: center;
   width: 80vw;
+
 }
 
 .card--container {
@@ -13,4 +12,11 @@
   height: 90%;
   padding: 10%;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  /* Apply styles for screens with a maximum width of 768px */
+  .grid--container {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  }
 }
