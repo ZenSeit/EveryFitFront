@@ -1,0 +1,64 @@
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.cart-icon {
+  margin: 5px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.cart-window {
+  position: absolute;
+  z-index: 2;
+  top: 100%;
+  right: 0;
+  padding: 10px;
+  display: none;
+  width: 20vw;
+  /* From https://css.glass */
+  background: rgba(97, 125, 159, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border: 1px solid rgba(97, 125, 159, 0.3);
+}
+
+.cart-window.open {
+  display: block;
+}
+
+.make--order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  button {
+    margin: 0 10px;
+    border-radius: 8px;
+  }
+}

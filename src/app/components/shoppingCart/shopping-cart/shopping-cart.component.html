@@ -1,0 +1,23 @@
+<div class="cart">
+  <a (click)="toggleCart()">
+    <i class="material-icons">shopping_cart</i>
+    <span class="cart-count">{{ cartItems.length }}</span>
+  </a>
+  <div
+    class="cart-window"
+    *ngIf="cartItems.length > 0"
+    [ngClass]="{ open: isCartOpen }"
+  >
+    <app-product-in-cart-card
+      *ngFor="let product of cartItems"
+      [product]="product"
+      (productRemoved)="removeProduct($event)"
+    ></app-product-in-cart-card>
+    <div class="make--order">
+      <h4>Total: {{ total | currency }}</h4>
+      <button mat-raised-button color="primary" (click)="sendOrder()">
+        Buy
+      </button>
+    </div>
+  </div>
+</div>
