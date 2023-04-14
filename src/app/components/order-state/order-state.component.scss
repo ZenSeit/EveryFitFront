@@ -1,0 +1,36 @@
+.order-state{
+    margin-top: 20px;
+    h2{
+        margin-bottom: 10px;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    p{
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .payment{
+        background: rgb(87,94,106);
+        background: linear-gradient(90deg, rgba(87,94,106,1) 0%, rgb(59, 160, 56) 35%);
+    }
+
+    .cancel{
+        background: rgb(87,94,106);
+        background: linear-gradient(90deg, rgba(87,94,106,1) 0%, rgb(128, 146, 143) 35%);
+    }
+
+    .delivery{
+        background: rgb(87,94,106);
+        background: linear-gradient(90deg, rgba(87,94,106,1) 0%, rgb(123, 158, 253) 35%);
+    }
+
+    .complete{
+        background: rgb(87,94,106);
+        background: linear-gradient(90deg, rgba(87,94,106,1) 0%, rgb(34, 253, 107) 35%);
+    }
+
+    
+}
