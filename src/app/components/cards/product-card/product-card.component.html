@@ -11,15 +11,20 @@
 
   <ng-template [ngIf]="(product?.quantity ?? 0) > 0" [ngIfElse]="soldOut">
     <div class="add--actions">
-      <button *ngIf="(product?.quantity ?? 0) > 1" (click)="decreaseQuantity()">
-        -
-      </button>
+      <i
+        class="material-icons"
+        *ngIf="(quantityToBuy ?? 0) > 1"
+        (click)="decreaseQuantity()"
+        >remove_circle</i
+      >
+
       <h4>Units to add: {{ quantityToBuy }}</h4>
-      <button
+      <i
+        class="material-icons"
         *ngIf="(this.product?.quantity ?? 0) > this.quantityToBuy"
         (click)="increaseQuantity()"
-      >+        
-      </button>
+        >add_circle</i
+      >
     </div>
     <mat-card-actions>
       <button mat-button (click)="addCart()">Add cart</button>

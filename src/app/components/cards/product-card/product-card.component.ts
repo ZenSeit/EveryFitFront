@@ -12,6 +12,7 @@ export class ProductCardComponent {
 
   @Output() productInCart=new EventEmitter<any>();
 
+
   quantityToBuy:number = 1
 
   constructor() { 

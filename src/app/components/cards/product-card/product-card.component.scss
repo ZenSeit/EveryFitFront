@@ -9,6 +9,7 @@
     &:hover{
         transform: scale(1.05);
     }
+    height: 50vh;
 }
 
 .title--card{
@@ -31,6 +32,7 @@
 .img--card{
     grid-column: 1 / 2;
     width: 15vw;
+    height: 20vh;
     padding: 5%;
 }
 
@@ -47,8 +49,14 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 100%;
     button{
         margin: 0 10px;
         border-radius: 8px;
     }
+}
+
+.material-icons{
+    margin: 1%;
+    cursor: pointer;
 }
