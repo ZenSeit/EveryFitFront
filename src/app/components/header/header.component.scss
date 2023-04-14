@@ -16,6 +16,22 @@
   nav {
     /* Your navigation styles go here */
   }
+
+  .action--header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 5vh;
+
+    h2{
+      margin: 0 15px 0 15px;
+    }
+
+    i{
+      margin: 0 15px 0 15px;
+      cursor: pointer;
+    }
+  }
   
   
   

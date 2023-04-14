@@ -4,7 +4,13 @@
     <nav>
       <!-- Navigation links go here -->
     </nav>
-    <app-shopping-cart (newOrder)="generateOrder($event)"></app-shopping-cart> <!-- Add the shopping cart component here -->
+    <div class="action--header">
+      <h2 *ngIf="customer">Welcome {{customer.name}}</h2>
+      <app-shopping-cart (newOrder)="generateOrder($event)" [customerId]="customer?.id || ''"></app-shopping-cart>
+      <i class="material-icons" *ngIf="customer" (click)="logout()">logout</i>
+      <i class="material-icons" *ngIf="!customer" routerLink="/login">login</i>
+    </div>
+    
   </header>
   
   
