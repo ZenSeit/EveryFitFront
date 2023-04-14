@@ -30,5 +30,9 @@ export class ClothingItemsService {
     return this.http.put(hostLocal.host+`/items/${id}/${quantity}`,null)
   }
 
+  updateInventoryAfterBuy(id:string,quantity:number):Observable<any>{
+    return this.http.put(hostLocal.host+`/items/buy/${id}/${quantity}`,null)
+  }
+
 
 }
