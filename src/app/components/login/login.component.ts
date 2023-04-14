@@ -5,7 +5,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomerService } from 'src/app/services/customerService/customer.service';
+import { TokenService } from 'src/app/services/tokenService/token.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +19,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private customerService: CustomerService
+    private customerService: CustomerService,
+    private tokenService: TokenService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -27,15 +31,16 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit(form: FormGroup) {
-    this.customerService
-      .login(form.value)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  async onSubmit(form: FormGroup) {
+    try {
+      const res = await this.customerService.login(form.value);
+      const token = await res.user.getIdToken();
+      localStorage.setItem('token', token);
+      this.tokenService.setToken(token || '');
+      this.router.navigateByUrl('/home');
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   get email() {
