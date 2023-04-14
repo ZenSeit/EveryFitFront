@@ -1,0 +1,42 @@
+/* Example CSS styles for an item in a cart */
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: scale-down;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    font-weight: bold;
+  }
+  
+  .item-price {
+    margin-top: 5px;
+  }
+  
+  .item-quantity {
+    margin-top: 5px;
+    color: #777;
+  }
+  
+  .remove-item {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  

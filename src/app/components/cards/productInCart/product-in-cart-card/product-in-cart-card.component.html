@@ -1,0 +1,11 @@
+<!-- Example HTML structure for an item in a cart -->
+<div class="cart-item">
+    <img class="item-image" src="{{ product?.urlImage }}" alt="Product Image"> <!-- Product image -->
+    <div class="item-details">
+      <div class="item-name">{{product?.name}}</div> <!-- Product name -->
+      <div class="item-price">$ {{product?.price}}</div> <!-- Product price -->
+      <div class="item-quantity">Quantity: {{product?.quantity}}</div> <!-- Product quantity -->
+    </div>
+    <button class="remove-item"><i class="material-icons" (click)="removeProduct()">highlight_remove</i></button> <!-- Button to remove item from cart -->
+  </div>
+  
