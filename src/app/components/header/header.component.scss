@@ -1,37 +1,43 @@
 /* Example CSS for a minimal header with a floating cart window in an e-commerce website */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f8f8f8;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    height: 5vh;
-  }
-  
-  .logo {
-    /* Your logo styles go here */
-  }
-  
-  nav {
-    /* Your navigation styles go here */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: 5vh;
+}
+
+.logo {
+  /* Your logo styles go here */
+}
+
+nav {
+  /* Your navigation styles go here */
+}
+
+.action--header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 5vh;
+
+  h2 {
+    margin: 0 15px 0 15px;
   }
 
-  .action--header{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    height: 5vh;
-
-    h2{
-      margin: 0 15px 0 15px;
-    }
-
-    i{
-      margin: 0 15px 0 15px;
-      cursor: pointer;
-    }
+  i {
+    margin: 0 15px 0 15px;
+    cursor: pointer;
   }
-  
-  
-  
+}
+
+.options--header {
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-decoration: none; 
+}

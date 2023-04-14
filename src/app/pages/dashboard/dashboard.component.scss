@@ -1,0 +1,22 @@
+/* CSS for dashboard layout */
+.dashboard {
+    display: flex; /* Use flexbox to create 2-column layout */
+    height: 92vh; /* Set height of dashboard to full viewport height */
+  }
+  
+  .sidebar {
+    width: 40%; /* Set width of sidebar column */
+    background-color: #f0f0f0; /* Set background color for sidebar */
+    /* Additional styles for sidebar */
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Allow main content column to grow and fill remaining space */
+    background-color: #fff; /* Set background color for main content */
+    /* Additional styles for main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+  }
+  

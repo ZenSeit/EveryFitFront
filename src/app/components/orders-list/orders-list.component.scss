@@ -1,0 +1,59 @@
+/* CSS for minimalist order card design */
+.order-list {
+  list-style-type: none; /* Remove default list-style */
+  padding: 0; /* Remove default padding */
+  width: 50vw;
+}
+
+.order-card {
+  padding: 20px; /* Add padding for spacing */
+  margin-bottom: 10px; /* Add margin bottom for spacing between cards */
+  /* Additional styles for order card */
+  /* From https://css.glass */
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.8px);
+  -webkit-backdrop-filter: blur(11.8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-card:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(13.8px);
+  -webkit-backdrop-filter: blur(13.8px);
+}
+
+.order-title {
+  font-size: 18px; /* Set font size for order title */
+  margin-top: 0; /* Remove default margin top for title */
+  margin-bottom: 10px; /* Add margin bottom for spacing */
+  /* Additional styles for order title */
+}
+
+.order-details {
+  font-size: 14px; /* Set font size for order details */
+  margin: 0; /* Remove default margin for details */
+  /* Additional styles for order details */
+}
+
+.payment {
+  background: rgba(13, 171, 77, 0.47); /* Set background color for card */
+  border: 1px solid rgba(13, 171, 77, 0.3); /* Add border for card */
+}
+
+.cancel {
+  background-color: #f0f0f0; /* Set background color for card */
+  border: 1px solid #ccc; /* Add border for card */
+}
+
+.delete-button {
+    background-color: #e74c3c; /* Set background color for delete button */
+    color: #fff; /* Set text color for delete button */
+    border: none; /* Remove default button border */
+    padding: 10px; /* Add padding for button */
+    cursor: pointer; /* Add cursor pointer for hover effect */
+    border-radius: 5px; /* Add border radius for button */
+  }

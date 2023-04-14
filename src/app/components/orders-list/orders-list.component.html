@@ -1,0 +1,21 @@
+<!-- HTML structure for minimalist card design -->
+<ul class="order-list">
+  <app-title-page [title]="'My Orders'"></app-title-page>
+  <li
+    [ngClass]="'order-card ' + order.state.toLocaleLowerCase()"
+    *ngFor="let order of orders"
+  >
+    <div class="order-details">
+      <h3 class="order-title">Order id: {{ order.id }}</h3>
+      <p class="order-details">Products:</p>
+      <ul class="order-details">
+        <li *ngFor="let product of order.products">
+          {{ product.name }} * {{ product.quantity }}
+        </li>
+      </ul>
+      <p class="order-details">Status: {{ order.state }}</p>
+      <h3>Total: {{ order.products | productsTotal }}</h3>
+    </div>
+    <button *ngIf="order.state!=='CANCEL'" class="delete-button" (click)="cancelOrder(order.id || '')">Cancel</button>
+  </li>
+</ul>

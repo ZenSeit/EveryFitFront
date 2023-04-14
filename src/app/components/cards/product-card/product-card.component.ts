@@ -21,6 +21,7 @@ export class ProductCardComponent implements OnInit {
   constructor(private tokenService:TokenService) { 
   }
   ngOnInit(): void {
+    this.tokenService.loadToken()
     this.tokenService.isLogged().subscribe((data:any)=>{
       this.show = data
     } )

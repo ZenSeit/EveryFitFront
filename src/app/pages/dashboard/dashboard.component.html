@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<!-- HTML structure for dashboard with 2 columns -->
+<div class="dashboard">
+    <div class="sidebar">
+      <app-customer-info [customerId]="customer?.id || ''"></app-customer-info>
+    </div>
+    <div class="main-content">
+      <app-orders-list [orders]="orders" (orderSelected)="cancelOrder($event)"></app-orders-list>
+    </div>
+  </div>
+  

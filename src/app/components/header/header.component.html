@@ -1,11 +1,12 @@
 <!-- Example HTML for a minimal header with a floating cart window in an e-commerce website -->
 <header class="header">
-    <div class="logo"> <!-- Your logo goes here --> </div>
+    <div class="logo"> Logo </div>
     <nav>
       <!-- Navigation links go here -->
     </nav>
     <div class="action--header">
       <h2 *ngIf="customer">Welcome {{customer.name}}</h2>
+      <a class="options--header" routerLink="/home/dashboard">My Account</a>
       <app-shopping-cart (newOrder)="generateOrder($event)" [customerId]="customer?.id || ''"></app-shopping-cart>
       <i class="material-icons" *ngIf="customer" (click)="logout()">logout</i>
       <i class="material-icons" *ngIf="!customer" routerLink="/login">login</i>
