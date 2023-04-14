@@ -15,6 +15,8 @@ export class OrderGeneratedPageComponent implements OnInit {
 
   orderGenerated: Order | undefined= undefined;
 
+  total : number = 0;
+
   customer: Customer | undefined = undefined;
 
   ngOnInit(): void {
@@ -23,9 +25,7 @@ export class OrderGeneratedPageComponent implements OnInit {
         this.router.navigate(['/home']);
       } else {
         this.orderGenerated = JSON.parse(params['data']);
-        this.customerService.getCustomerById('string').subscribe((customer) => {
-          this.customer = customer;
-        } );
+        this.total = this.orderGenerated?.products.map((product) => product.price*product.quantity).reduce((a, b) => a + b, 0) || 0;
       }
     });
   }

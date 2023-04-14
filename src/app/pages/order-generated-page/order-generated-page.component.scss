@@ -1,0 +1,50 @@
+.main--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://img.freepik.com/free-photo/blurred-background-clothing-store_1258-82.jpg?w=1380&t=st=1681439968~exp=1681440568~hmac=0dc81196ea1669f8e9ef38b050ac7340fb21a56801c23107450dd701b2a58580");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(50px);
+}
+
+.order-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: 70vh;
+  margin: 0 auto;
+  padding: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.4px);
+  -webkit-backdrop-filter: blur(14.4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.order--total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.order--button {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin: 5px;
+  }
+}
+
+.products--title {
+  text-align: center;
+  font-weight: 600;
+}
