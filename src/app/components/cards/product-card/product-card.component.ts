@@ -1,21 +1,29 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ClothingItem } from 'src/app/models/clothingItem.model';
+import { TokenService } from 'src/app/services/tokenService/token.service';
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss']
 })
-export class ProductCardComponent {
+export class ProductCardComponent implements OnInit {
 
   @Input() product:ClothingItem | undefined = undefined
 
   @Output() productInCart=new EventEmitter<any>();
 
+  show:boolean = false;
+
 
   quantityToBuy:number = 1
 
-  constructor() { 
+  constructor(private tokenService:TokenService) { 
+  }
+  ngOnInit(): void {
+    this.tokenService.isLogged().subscribe((data:any)=>{
+      this.show = data
+    } )
   }
 
   addCart(){
@@ -44,4 +52,5 @@ export class ProductCardComponent {
     if(this.quantityToBuy>1) this.quantityToBuy--
   }
 
+  
 }

@@ -27,7 +27,7 @@
       >
     </div>
     <mat-card-actions>
-      <button mat-button (click)="addCart()">Add cart</button>
+      <button *ngIf="show" mat-button (click)="addCart()">Add cart</button>
     </mat-card-actions>
   </ng-template>
   <ng-template #soldOut>

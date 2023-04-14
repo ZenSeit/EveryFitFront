@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ClothingItem } from 'src/app/models/clothingItem.model';
 import { Order } from 'src/app/models/order.model';
 import { OrderService } from 'src/app/services/order/order.service';
@@ -12,6 +12,7 @@ import { ShoppingCartService } from 'src/app/services/shoppingCart/shopping-cart
 export class ShoppingCartComponent implements OnInit {
 
   @Output() newOrder = new EventEmitter<Order>();
+  @Input() customerId: string = '';
 
   isCartOpen: boolean = false;
 
@@ -56,7 +57,7 @@ export class ShoppingCartComponent implements OnInit {
 
   sendOrder() {
     const newOrder: Order = {
-      customer: '',
+      customer: this.customerId,
       products: this.cartItems,
       state: 'PAYMENT',
     };
