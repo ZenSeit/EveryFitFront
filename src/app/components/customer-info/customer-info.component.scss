@@ -1,0 +1,19 @@
+.customer-info,
+.order-state {
+  margin-top: 20px;
+}
+
+.customer-info h2,
+.order-state h2 {
+  margin-bottom: 10px;
+  color: white;
+  background: rgb(87,94,106);
+background: linear-gradient(90deg, rgba(87,94,106,1) 0%, rgba(97,65,156,1) 35%);
+border-radius: 10px;
+padding: 5px;
+}
+
+.customer-info p,
+.order-state p {
+  margin: 5px 0;
+}
