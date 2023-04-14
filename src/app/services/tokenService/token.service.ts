@@ -26,6 +26,7 @@ export class TokenService {
 
    loadToken(){
     this.tokenStorage.next(localStorage.getItem('token') || '');
+    this.logged.next(!this.jwtAuth.isTokenExpired(localStorage.getItem('token') || ''));
    }
 
    closeSession(){

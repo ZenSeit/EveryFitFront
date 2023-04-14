@@ -32,6 +32,8 @@ import { OrderStateComponent } from './components/order-state/order-state.compon
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
+import { OrdersListComponent } from './components/orders-list/orders-list.component';
+import { ProductsTotalPipe } from './pipes/products-total.pipe';
 
 
 
@@ -57,7 +59,9 @@ import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
     CustomerInfoComponent,
     OrderStateComponent,
     DashboardComponent,
-    CatalogComponent
+    CatalogComponent,
+    OrdersListComponent,
+    ProductsTotalPipe
   ],
   imports: [
     BrowserModule,
