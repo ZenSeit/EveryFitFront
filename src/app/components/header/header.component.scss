@@ -41,3 +41,18 @@ nav {
   font-size: 1.3em;
   text-decoration: none; 
 }
+
+.logo--header{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 3vh;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-decoration: none; 
+}
+
+.logo--header:hover{
+  cursor: pointer;
+}

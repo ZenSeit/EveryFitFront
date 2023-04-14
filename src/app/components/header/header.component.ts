@@ -16,6 +16,8 @@ import { TokenService } from 'src/app/services/tokenService/token.service';
 })
 export class HeaderComponent implements OnInit {
 
+
+
   customer: Customer | undefined = undefined;
 
 

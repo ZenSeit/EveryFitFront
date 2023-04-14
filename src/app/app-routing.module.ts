@@ -6,6 +6,7 @@ import { OrderGeneratedPageComponent } from './pages/order-generated-page/order-
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthFireGuard } from './guards/auth-fire.guard';
 import { CatalogComponent } from './components/catalog/catalog.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 const routes: Routes = [
@@ -36,7 +37,8 @@ const routes: Routes = [
   {
     path:"ordergenerated",
     component: OrderGeneratedPageComponent
-  }
+  },
+  { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
 
 @NgModule({

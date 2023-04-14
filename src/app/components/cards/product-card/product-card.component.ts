@@ -15,7 +15,6 @@ export class ProductCardComponent implements OnInit {
 
   show:boolean = false;
 
-
   quantityToBuy:number = 1
 
   constructor(private tokenService:TokenService) { 
@@ -39,7 +38,7 @@ export class ProductCardComponent implements OnInit {
         urlImage: this.product.urlImage
       }
 
-      this.productInCart.emit(productToCart)
+      this.productInCart.emit([productToCart,this.product.quantity])
 
     }
     

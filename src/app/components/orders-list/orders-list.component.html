@@ -1,6 +1,7 @@
 <!-- HTML structure for minimalist card design -->
+<app-title-page [title]="'My Orders'"></app-title-page>
+
 <ul class="order-list">
-  <app-title-page [title]="'My Orders'"></app-title-page>
   <li
     [ngClass]="'order-card ' + order.state.toLocaleLowerCase()"
     *ngFor="let order of orders"

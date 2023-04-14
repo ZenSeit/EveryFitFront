@@ -34,7 +34,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
 import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { OrdersListComponent } from './components/orders-list/orders-list.component';
 import { ProductsTotalPipe } from './pipes/products-total.pipe';
-
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { EditCustomerComponent } from './components/edit-customer/edit-customer.component';
 
 
 
@@ -61,7 +62,9 @@ import { ProductsTotalPipe } from './pipes/products-total.pipe';
     DashboardComponent,
     CatalogComponent,
     OrdersListComponent,
-    ProductsTotalPipe
+    ProductsTotalPipe,
+    NotFoundComponent,
+    EditCustomerComponent,
   ],
   imports: [
     BrowserModule,

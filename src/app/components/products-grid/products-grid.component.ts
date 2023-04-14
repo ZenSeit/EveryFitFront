@@ -24,7 +24,7 @@ export class ProductsGridComponent implements OnInit {
     })
   }
 
-  addProductToCart(product:ClothingItem){
+  addProductToCart(product:any){
     this.shoppingCartService.saveCart(product)
   }
 

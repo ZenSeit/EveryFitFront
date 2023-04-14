@@ -3,18 +3,20 @@
   list-style-type: none; /* Remove default list-style */
   padding: 0; /* Remove default padding */
   width: 50vw;
+  height: 80vh;
+  overflow-y: auto;
 }
 
 .order-card {
   padding: 20px; /* Add padding for spacing */
   margin-bottom: 10px; /* Add margin bottom for spacing between cards */
-  /* Additional styles for order card */
   /* From https://css.glass */
-
+  background: rgba(0, 114, 19, 0.51);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.8px);
   -webkit-backdrop-filter: blur(11.8px);
+  border: 1px solid rgba(0, 114, 19, 0.3);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +42,8 @@
 }
 
 .payment {
+  color: white;
+  font-weight: 600;
   background: rgba(13, 171, 77, 0.47); /* Set background color for card */
   border: 1px solid rgba(13, 171, 77, 0.3); /* Add border for card */
 }
@@ -50,10 +54,10 @@
 }
 
 .delete-button {
-    background-color: #e74c3c; /* Set background color for delete button */
-    color: #fff; /* Set text color for delete button */
-    border: none; /* Remove default button border */
-    padding: 10px; /* Add padding for button */
-    cursor: pointer; /* Add cursor pointer for hover effect */
-    border-radius: 5px; /* Add border radius for button */
-  }
+  background-color: #e74c3c; /* Set background color for delete button */
+  color: #fff; /* Set text color for delete button */
+  border: none; /* Remove default button border */
+  padding: 10px; /* Add padding for button */
+  cursor: pointer; /* Add cursor pointer for hover effect */
+  border-radius: 5px; /* Add border radius for button */
+}

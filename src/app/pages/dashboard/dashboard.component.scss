@@ -5,7 +5,7 @@
   }
   
   .sidebar {
-    width: 40%; /* Set width of sidebar column */
+    width: 40vw; /* Set width of sidebar column */
     background-color: #f0f0f0; /* Set background color for sidebar */
     /* Additional styles for sidebar */
   }
@@ -18,5 +18,10 @@
     flex-direction: column;
     align-items: center;
     width: 60vw;
+    background-image: url("https://img.freepik.com/free-photo/clothing-store-with-blurred-effect_23-2148164717.jpg?w=1380&t=st=1681499877~exp=1681500477~hmac=45a763f89ac9dda6a32b7e8da5ee48b244a3a76d7b77058ec7e0c635550cc3e6");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   

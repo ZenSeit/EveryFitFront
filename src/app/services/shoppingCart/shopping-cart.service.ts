@@ -29,7 +29,11 @@ export class ShoppingCartService {
   
 
 
-  saveCart(myProduct:ClothingItem){
+  saveCart(productInfo:any){
+
+    const myProduct:ClothingItem = productInfo[0]
+
+    const quantityInStock = productInfo[1]
     
     const isProductInCart = this.productsInCart.find((product)=>product.id === myProduct.id);
 
@@ -37,6 +41,7 @@ export class ShoppingCartService {
       this.productsInCart.map((product)=>{ 
         if(product.id === myProduct.id){
           product.quantity += myProduct.quantity
+          if(product.quantity > quantityInStock) product.quantity = quantityInStock
         }
       })
       localStorage.setItem('cart', JSON.stringify(this.productsInCart))
